@@ -1,11 +1,11 @@
-# Installing Typescript
+# Typescript
 
 There are two main ways to install Typescript in your projects:
 
 - Via npm (the Node.js package manager)
 - By installing Typescript's Visual Studio plugins
 
-## Terminal commands
+## Command Line Usage
 
 ### Install
 
