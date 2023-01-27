@@ -88,3 +88,34 @@ interface Animal {
   }
   printAnimal({ name: 'cat', type: 'domestic' });
 })();
+
+// TYPE ASSERTIONS
+(() => {
+  const myCanvas = document.getElementById('canvas') as HTMLCanvasElement;
+  const myAnchorTag = <HTMLAnchorElement>document.querySelector('anchor-tag');
+})();
+
+// LITERAL TYPES
+(() => {
+  let changingString = 'Hello World';
+  changingString = 'Olá Mundo';
+  const contantString = 'Hello World';
+  let x: 'hello' = 'hello';
+  x = 'hello';
+  // x = 'olá'; //ERROR
+  function justifyContent(el: HTMLDivElement, justify: 'left' | 'center' | 'right') {
+    return (el.style.justifyContent = `${justify}`);
+  }
+  function compare(a: string, b: string): -1 | 0 | 1 {
+    return a === b ? 0 : a > b ? 1 : -1;
+  }
+})();
+
+// LITERAL INFERENCE
+(() => {
+  const obj = { counter: 0 };
+  let condition: boolean = true;
+  if (condition) {
+    obj.counter = 1;
+  }
+})();

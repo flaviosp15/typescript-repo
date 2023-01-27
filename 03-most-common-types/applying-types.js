@@ -63,3 +63,31 @@
     }
     printAnimal({ name: 'cat', type: 'domestic' });
 })();
+// TYPE ASSERTIONS
+(function () {
+    var myCanvas = document.getElementById('canvas');
+    var myAnchorTag = document.querySelector('anchor-tag');
+})();
+// LITERAL TYPES
+(function () {
+    var changingString = 'Hello World';
+    changingString = 'Olá Mundo';
+    var contantString = 'Hello World';
+    var x = 'hello';
+    x = 'hello';
+    // x = 'olá'; //ERROR
+    function justifyContent(el, justify) {
+        return (el.style.justifyContent = "".concat(justify));
+    }
+    function compare(a, b) {
+        return a === b ? 0 : a > b ? 1 : -1;
+    }
+})();
+// LITERAL INFERENCE
+(function () {
+    var obj = { counter: 0 };
+    var condition = true;
+    if (condition) {
+        obj.counter = 1;
+    }
+})();
